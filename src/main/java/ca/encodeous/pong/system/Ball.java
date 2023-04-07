@@ -1,7 +1,6 @@
 package ca.encodeous.pong.system;
 
 import ca.encodeous.pong.Constants;
-import ca.encodeous.pong.physics.Vec2d;
 import ca.encodeous.pong.rendering.BoxObject;
 import ca.encodeous.pong.physics.GameObject;
 

@@ -89,6 +89,12 @@ public class MainMenu extends JFrame {
             system.startGame();
             playerControl.finishSubscription(system.getRightPaddle());
             window.setVisible(true);
+            window.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                    system.stopGame();
+                }
+            });
         });
         joinButton.addActionListener(e -> {
             // join server (tp)
