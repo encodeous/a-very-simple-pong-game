@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ca.encodeous.pong.gui.MainMenu">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="661" height="449"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="7ee40" binding="gameModeSelector">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <tabPlacement value="1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="2cade" binding="singlePlayerPanel" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Singleplayer"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="36373" binding="modeSelector" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="e27b5" class="javax.swing.JComboBox" binding="aiSelect">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <model>
+                        <item value="Bob (Easy)"/>
+                        <item value="Frank (Medium)"/>
+                        <item value="Builder the Bob (Impossible)"/>
+                        <item value="Custom"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="1f356" class="javax.swing.JButton" binding="playButton">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <text value="Play!"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="393ac" binding="difficultyPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="afd4f" class="javax.swing.JSlider" binding="difficultySlider">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <inverted value="false"/>
+                      <majorTickSpacing value="100"/>
+                      <maximum value="1000"/>
+                      <minorTickSpacing value="50"/>
+                      <paintTicks value="true"/>
+                      <snapToTicks value="true"/>
+                    </properties>
+                  </component>
+                  <component id="bdfc" class="javax.swing.JLabel" binding="difficulty">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <text value="Difficulty"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="8e921" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <font size="36"/>
+                  <text value="PONG"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="f6fd2" binding="multiPlayerPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="Two-player (LAN)"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <tabbedpane id="2e0a" binding="multiPlayerMode">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <tabPlacement value="3"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="add50" layout-manager="GridBagLayout">
+                    <constraints>
+                      <tabbedpane title="Join"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="1e257" layout-manager="GridBagLayout">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="1.0" weighty="1.0"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="d9dce" class="javax.swing.JTextField" binding="ipAddressField">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                              <gridbag weightx="0.0" weighty="0.0"/>
+                            </constraints>
+                            <properties>
+                              <text value=""/>
+                              <toolTipText value=""/>
+                            </properties>
+                          </component>
+                          <component id="7b08" class="javax.swing.JLabel" binding="ipHelpText">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                              <gridbag weightx="0.0" weighty="0.0"/>
+                            </constraints>
+                            <properties>
+                              <text value="Enter the server's IP Address"/>
+                            </properties>
+                          </component>
+                          <component id="eab69" class="javax.swing.JButton" binding="joinButton">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                              <gridbag weightx="0.0" weighty="0.0"/>
+                            </constraints>
+                            <properties>
+                              <text value="Join"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="bf587" layout-manager="GridBagLayout">
+                    <constraints>
+                      <tabbedpane title="Host"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="cd7f" binding="hostInfoPanel" layout-manager="GridBagLayout">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="2758c" class="javax.swing.JLabel" binding="hostInfoText">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                              <gridbag weightx="1.0" weighty="1.0"/>
+                            </constraints>
+                            <properties>
+                              <text value="Allow the other player to connect to the following address:"/>
+                            </properties>
+                          </component>
+                          <component id="b11a3" class="javax.swing.JLabel" binding="hostIpAddress">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                              <gridbag weightx="1.0" weighty="1.0"/>
+                            </constraints>
+                            <properties>
+                              <font style="1"/>
+                              <text value="Detecting your computer's LAN address..."/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </tabbedpane>
+            </children>
+          </grid>
+          <grid id="37728" binding="helpPanel" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Help"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="9d944" class="javax.swing.JTextArea" binding="helpText">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <text value="This is a rendition of the classic PONG game designed to be&#10;minimalistic and simple to play.&#10;&#10;To control your paddle, either use UP/DOWN arrow keys&#10;OR use your mouse to drag it.&#10;&#10;To win a game, you need to reach 11 points before the other player.&#10;" noi18n="true"/>
+                </properties>
+              </component>
+              <hspacer id="c85f5">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+              </hspacer>
+              <component id="ccd84" class="javax.swing.JLabel" binding="creditsLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Adam Chen / encodeous 2023 - Simpleish Pong Game"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+      <grid id="d9af0" binding="captionPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>
