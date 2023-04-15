@@ -1,5 +1,8 @@
 package ca.encodeous.pong.network.packets;
 
+/**
+ * Register packets to map the packet type to a new object of the type of the packet.
+ */
 public class PacketRegistry {
     public static SerializablePacket mapPacket(PacketType type){
         switch (type){

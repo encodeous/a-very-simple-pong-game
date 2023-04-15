@@ -1,11 +1,13 @@
 package ca.encodeous.pong.ai;
 
-import ca.encodeous.pong.Constants;
 import ca.encodeous.pong.physics.GameObject;
 import ca.encodeous.pong.physics.Vec2d;
 import ca.encodeous.pong.system.Paddle;
 import ca.encodeous.pong.system.PongSystem;
 
+/**
+ * The hardest Ai, (nearly) impossible to win against.
+ */
 public class BuilderTheBob extends Ai {
     GameObject ball, paddle;
     private PongSystem system;

@@ -12,6 +12,9 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.UUID;
 
+/**
+ * Responsible for handling the GUI properties of the main pong game.
+ */
 public class PongWindow extends JFrame implements GameSystemEvents {
     public static final float S_FACTOR = SwingDPI.getScaleFactor();
 
@@ -52,18 +55,27 @@ public class PongWindow extends JFrame implements GameSystemEvents {
         return renderObjects.get(id).getLastEntity();
     }
 
+    /**
+     * Called before the main game tick
+     */
     @Override
     public void preTick() {
         // read input first
         inputHandler.preTick();
     }
 
+    /**
+     * Called after all the objects are updated
+     */
     @Override
     public void postTick() {
         // render to the screen
         repaint();
     }
 
+    /**
+     * Called when a player wins.
+     */
     @Override
     public void win(int playerId) {
         JOptionPane informationOptionPane = new JOptionPane();

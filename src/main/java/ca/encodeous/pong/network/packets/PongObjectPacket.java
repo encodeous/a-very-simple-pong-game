@@ -1,6 +1,6 @@
 package ca.encodeous.pong.network.packets;
 
-import ca.encodeous.pong.network.RemoteEntity;
+import ca.encodeous.pong.network.client.RemoteEntity;
 import ca.encodeous.pong.physics.GameEntity;
 
 import java.awt.geom.Rectangle2D;
@@ -8,7 +8,10 @@ import java.nio.ByteBuffer;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class PongObjectPacket extends SerializablePacket {
+/**
+ *
+ */
+public class PongObjectPacket implements SerializablePacket {
     private static final ConcurrentHashMap<UUID, GameEntity> entityCache = new ConcurrentHashMap<>();
     public PongObjectPacket(PacketType type) {
         this.type = type;
@@ -23,7 +26,7 @@ public class PongObjectPacket extends SerializablePacket {
     }
 
     private GameEntity objectInfo;
-    private PacketType type;
+    private final PacketType type;
 
     @Override
     public PacketType getType() {

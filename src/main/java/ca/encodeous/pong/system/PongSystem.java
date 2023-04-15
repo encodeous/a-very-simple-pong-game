@@ -2,11 +2,14 @@ package ca.encodeous.pong.system;
 
 import ca.encodeous.pong.Constants;
 import ca.encodeous.pong.ai.Ai;
-import ca.encodeous.pong.ai.TuneableAi;
 import ca.encodeous.pong.physics.GameObject;
 import ca.encodeous.pong.physics.Vec2d;
 import ca.encodeous.pong.rendering.BoxObject;
 
+/**
+ * A specialized GameSystem for the Pong game, with specialized methods
+ * This class provides further game events that are specific to pong
+ */
 public class PongSystem extends GameSystem {
     public Ball getBall() {
         return ball;
@@ -76,22 +79,17 @@ public class PongSystem extends GameSystem {
         add(bottomBound);
 
         left = new Paddle();
-        left.setSize(Constants.SMALL_SIZE, Constants.LARGE_SIZE);
+        left.setSize(Constants.SMALL_SIZE, Constants.PADDLE_HEIGHT);
         left.setPositionCenter(new Vec2d(Constants.SMALL_SIZE, Constants.WORLD_HEIGHT / 2.0));
         left.setId(Constants.LEFT_PADDLE);
         add(left);
         right = new Paddle();
-        right.setSize(Constants.SMALL_SIZE, Constants.LARGE_SIZE);
+        right.setSize(Constants.SMALL_SIZE, Constants.PADDLE_HEIGHT);
         right.setPositionCenter(new Vec2d(Constants.WORLD_WIDTH - Constants.SMALL_SIZE, Constants.WORLD_HEIGHT / 2.0));
         right.setId(Constants.RIGHT_PADDLE);
         add(right);
 
         startRound();
-    }
-
-    @Override
-    protected void cleanup() {
-
     }
 
     /**

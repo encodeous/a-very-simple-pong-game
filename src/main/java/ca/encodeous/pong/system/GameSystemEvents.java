@@ -1,8 +1,11 @@
 package ca.encodeous.pong.system;
 
 import ca.encodeous.pong.physics.GameEntity;
-import ca.encodeous.pong.physics.GameObject;
 
+/**
+ * An interface that enables any number of clients or shims to hook into the GameSystem to listen for game events
+ * Possible TODO: Extract pong-specific events into a separate abstract class that implements this interface.
+ */
 public interface GameSystemEvents {
     /**
      * Called before ticking the objects

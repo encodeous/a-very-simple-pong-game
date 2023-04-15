@@ -32,20 +32,10 @@ public class Pong {
      * This code has been provided for you, and should not be modified
      */
     public static void main(String[] args) {
-//        PongWindow window = new PongWindow();
-//        Controller controller = new BuilderTheBob();
-//        PlayerController playerControl = new PlayerController(window.getInputHandler());
-//        PongSystem system = new PongSystem(window, controller, playerControl);
-//        system.startGame();
-//        playerControl.finishSubscription(system.getRightPaddle());
-//        window.setVisible(true);
         FlatDarculaLaf.setup();
         FlatInterFont.install();
         FlatLaf.setPreferredFontFamily( FlatInterFont.FAMILY );
         MainMenu menu = new MainMenu();
         menu.setVisible(true);
-//        Pong p = new Pong();
-//        p.setVisible(true);
-//        p.initComponents();
     }
 }

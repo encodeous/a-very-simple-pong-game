@@ -2,7 +2,6 @@ package ca.encodeous.pong.network.server;
 
 import ca.encodeous.pong.Constants;
 import ca.encodeous.pong.network.ConnectedEndpoint;
-import ca.encodeous.pong.network.RemoteController;
 import ca.encodeous.pong.network.packets.*;
 import ca.encodeous.pong.physics.GameEntity;
 import ca.encodeous.pong.rendering.PongWindow;
@@ -19,6 +18,9 @@ import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 
+/**
+ *
+ */
 public class PongHost {
     private WebSocketServer server;
     private ConnectedEndpoint client;

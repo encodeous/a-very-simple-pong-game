@@ -1,5 +1,8 @@
 package ca.encodeous.pong.network.packets;
 
+/**
+ * An enum to represent all the packets required to synchronize the game.
+ */
 public enum PacketType {
     WIN,
     SCORE_UPDATE,

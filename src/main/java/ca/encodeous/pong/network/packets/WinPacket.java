@@ -2,7 +2,7 @@ package ca.encodeous.pong.network.packets;
 
 import java.nio.ByteBuffer;
 
-public class WinPacket extends SerializablePacket {
+public class WinPacket implements SerializablePacket {
     @Override
     public PacketType getType() {
         return PacketType.WIN;

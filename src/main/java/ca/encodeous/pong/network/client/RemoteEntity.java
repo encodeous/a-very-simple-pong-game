@@ -1,10 +1,13 @@
-package ca.encodeous.pong.network;
+package ca.encodeous.pong.network.client;
 
 import ca.encodeous.pong.physics.GameEntity;
 
 import java.awt.geom.Rectangle2D;
 import java.util.UUID;
 
+/**
+ * A fictitious entity that exists only on the client side as a shim to handle PongObjectPackets
+ */
 public class RemoteEntity extends GameEntity {
 
     public void setBounds(Rectangle2D bound) {

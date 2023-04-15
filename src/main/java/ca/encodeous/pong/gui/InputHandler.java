@@ -10,6 +10,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.function.Consumer;
 
+/**
+ * Class responsible for handling input
+ */
 public class InputHandler {
     private Vec2d mousePosition = new Vec2d(0, 0);
     private boolean isMouseDown;

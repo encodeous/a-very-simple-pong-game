@@ -5,6 +5,10 @@ import ca.encodeous.pong.physics.GameObject;
 import javax.swing.*;
 import java.util.ArrayList;
 
+/**
+ * A core class that represents a generic world
+ * This class is run on the server side to provide ticking, physics simulation and basic game event updates
+ */
 public abstract class GameSystem {
     private final Timer ticker;
     protected final GameSystemEvents[] events;
@@ -44,7 +48,6 @@ public abstract class GameSystem {
     }
 
     protected abstract void setup();
-    protected abstract void cleanup();
 
     public void startGame() {
         setup();
@@ -56,7 +59,6 @@ public abstract class GameSystem {
     }
 
     public void stopGame() {
-        cleanup();
         ticker.stop();
     }
 

@@ -3,7 +3,10 @@ package ca.encodeous.pong.network.packets;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
-public class ScoreUpdatePacket extends SerializablePacket {
+/**
+ * Sent by the server to update the score on the client window
+ */
+public class ScoreUpdatePacket implements SerializablePacket {
     public int[] getScores() {
         return scores;
     }

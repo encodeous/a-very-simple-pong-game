@@ -7,6 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
+/**
+ * An object purely used to represent a GameEntity in the screen / rendered space.
+ * (It maps GameEntity to something that swing can render)
+ */
 public class ScreenObject extends JComponent {
     Color c = Color.white;
 
@@ -17,6 +21,7 @@ public class ScreenObject extends JComponent {
     private GameEntity lastEntity;
     @Override
     public void paint(Graphics g) {
+        // Render specific special objects based on their game entity id
         if(lastEntity.getId().equals(Constants.BALL_ID)){
             // render ball as circle
             g.setColor(Color.red);

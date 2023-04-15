@@ -91,7 +91,7 @@ public class MainMenu extends JFrame {
             window.setVisible(true);
             window.addWindowListener(new WindowAdapter() {
                 @Override
-                public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                public void windowClosing(WindowEvent windowEvent) {
                     system.stopGame();
                 }
             });

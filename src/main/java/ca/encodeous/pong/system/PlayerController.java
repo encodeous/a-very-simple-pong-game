@@ -4,6 +4,10 @@ import ca.encodeous.pong.Constants;
 import ca.encodeous.pong.gui.InputHandler;
 import ca.encodeous.pong.physics.GameEntity;
 
+/**
+ * A class that hooks into the PongWindow/InputHandler to capture the player's inputs
+ * Supports both touch, mouse and keyboard inputs.
+ */
 public class PlayerController implements Controller {
     private double dir = 0;
     private InputHandler game;

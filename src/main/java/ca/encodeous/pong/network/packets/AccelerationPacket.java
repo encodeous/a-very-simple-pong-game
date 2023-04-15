@@ -3,7 +3,10 @@ package ca.encodeous.pong.network.packets;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
-public class AccelerationPacket extends SerializablePacket {
+/**
+ * Packet sent to the server when the client moves their paddle.
+ */
+public class AccelerationPacket implements SerializablePacket {
 
     private double acceleration;
     private UUID id;

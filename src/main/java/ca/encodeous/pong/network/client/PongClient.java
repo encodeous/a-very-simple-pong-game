@@ -4,7 +4,6 @@ import ca.encodeous.pong.Constants;
 import ca.encodeous.pong.network.ConnectedEndpoint;
 import ca.encodeous.pong.network.packets.*;
 import ca.encodeous.pong.rendering.PongWindow;
-import ca.encodeous.pong.system.Controller;
 import ca.encodeous.pong.system.PlayerController;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
@@ -14,12 +13,20 @@ import java.awt.event.WindowAdapter;
 import java.net.URI;
 import java.nio.ByteBuffer;
 
+/**
+ * Client side code that is responsible for interfacing with the server. It synchronizes with the server.
+ */
 public class PongClient {
     private WebSocketClient client;
     private ConnectedEndpoint endpoint;
     private Timer syncControlTimer;
     private PongWindow window;
     private PlayerController controller;
+
+    /**
+     * Call to connect to a pong server.
+     * @param serverUri the uri of the server.
+     */
     public void connect(URI serverUri){
         client = new WebSocketClient(serverUri) {
             @Override
@@ -31,6 +38,7 @@ public class PongClient {
                 syncControlTimer = new Timer(1, (x)->{
                     window.preTick();
                     if(controller.getEntity() != null){
+                        // sends the acceleration packet to update the paddle.
                         AccelerationPacket packet = new AccelerationPacket();
                         packet.setAcceleration(controller.getPaddleAccel());
                         packet.setId(controller.getEntity().getId());
@@ -41,7 +49,7 @@ public class PongClient {
                 window.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-                        destroy();
+                        cleanup();
                     }
                 });
             }
@@ -68,9 +76,10 @@ public class PongClient {
         };
         client.connect();
     }
-    public void destroy(){
-        cleanup();
-    }
+
+    /**
+     * Destroys the client and disconnects.
+     */
     private void cleanup(){
         client.close();
         if(syncControlTimer != null){

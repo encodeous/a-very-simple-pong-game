@@ -6,6 +6,9 @@ import ca.encodeous.pong.system.Paddle;
 import ca.encodeous.pong.system.PongSystem;
 import org.spongepowered.noise.module.source.Perlin;
 
+/**
+ * An Ai of adjustable difficulty. Ranges from difficulty 0 (hardest) and 1000 (easiest)
+ */
 public class TuneableAi extends Ai {
     public static final int FRANK_NERF = 400;
     public static final int BOB_NERF = 700;

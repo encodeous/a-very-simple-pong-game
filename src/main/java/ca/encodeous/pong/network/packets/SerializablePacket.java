@@ -2,8 +2,11 @@ package ca.encodeous.pong.network.packets;
 
 import java.nio.ByteBuffer;
 
-public abstract class SerializablePacket {
-    public abstract PacketType getType();
-    public abstract void deserialize(ByteBuffer buf);
-    public abstract void serialize(ByteBuffer buf);
+/**
+ * An interface that represents a packet that can be sent and received over the network.
+ */
+public interface SerializablePacket {
+    PacketType getType();
+    void deserialize(ByteBuffer buf);
+    void serialize(ByteBuffer buf);
 }
