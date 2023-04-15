@@ -201,7 +201,6 @@ public abstract class GameObject extends GameEntity {
 
     /**
      * Handles automatic object changes, such as position and world-to-camera position synchronization
-     * @return whether the component requires a repaint
      */
     public void tick(GameSystem game){
         // tick movement

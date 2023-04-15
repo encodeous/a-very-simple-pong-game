@@ -10,7 +10,7 @@ import org.java_websocket.WebSocket;
 import java.nio.ByteBuffer;
 
 /**
- * A universal wrapper that is used both on the client and server side to encapsulate the methods & data required to maintain a connection with a remote party
+ * A universal wrapper that is used both on the client and server side to encapsulate the methods and data required to maintain a connection with a remote party
  */
 public class ConnectedEndpoint {
     private final ByteBuffer sendBuffer = ByteBuffer.allocate(Constants.MAX_PACKET_SIZE);
